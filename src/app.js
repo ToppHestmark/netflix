@@ -3,14 +3,14 @@ import { BrowserRouter as Router, Switch } from 'react-router-dom';
 import { Home, Browse, Signin, Signup } from './pages';
 import * as ROUTES from './constants/routes';
 import { IsUserRedirect, ProtectedRoute } from './helpers/routes';
+import { useAuthListener } from './hooks';
 
 function App() {
-  const user = null;
+  const {user} = useAuthListener();
 
   return (
       <Router>
         <Switch>
-
           <IsUserRedirect 
             user={user} 
             loggedInPath={ROUTES.BROWSE} 
@@ -34,7 +34,6 @@ function App() {
         <IsUserRedirect user={user} loggedInPath={ROUTES.BROWSE} path={ROUTES.HOME} exact>
           <Home />
         </IsUserRedirect>
-
       </Switch>
     </Router>
   );
