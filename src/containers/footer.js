@@ -4,7 +4,7 @@ import { Footer } from '../components';
 export function FooterContainer() {
   return (
     <Footer>
-      <Footer.Title>Questions? Contact us.</Footer.Title>
+      <Footer.Title>Questions? Call 020-79 06 35</Footer.Title>
       <Footer.Break />
       <Footer.Row>
         <Footer.Column>
