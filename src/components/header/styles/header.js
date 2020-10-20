@@ -101,6 +101,7 @@ export const ButtonLink = styled(ReactRouterLink)`
 export const Picture = styled.button`
   background: url(${({ src }) => src});
   background-size: contain;
+  background-repeat: no-repeat;
   border: 0;
   width: 32px;
   height: 32px;
