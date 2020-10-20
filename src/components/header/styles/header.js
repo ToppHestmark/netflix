@@ -56,6 +56,7 @@ export const SearchInput = styled.input`
   padding: ${({ active }) => (active === true ? '0 10px' : '0')};
   opacity: ${({ active }) => (active === true ? '1' : '0')};
   width: ${({ active }) => (active === true ? '200px' : '0px')};
+  outline: 0;
 `;
 
 export const Search = styled.div`
@@ -74,6 +75,7 @@ export const SearchIcon = styled.button`
   cursor: pointer;
   background-color: transparent;
   border: 0;
+  outline: 0;
   img {
     filter: brightness(0) invert(1);
     width: 16px;
@@ -101,7 +103,6 @@ export const ButtonLink = styled(ReactRouterLink)`
 export const Picture = styled.button`
   background: url(${({ src }) => src});
   background-size: contain;
-  background-repeat: no-repeat;
   border: 0;
   width: 32px;
   height: 32px;
@@ -130,6 +131,7 @@ export const Dropdown = styled.div`
   }
   button {
     margin-right: 10px;
+    background-repeat: no-repeat;
   }
   p {
     font-size: 12px;
@@ -200,7 +202,7 @@ export const PlayButton = styled.button`
   font-size: 20px;
   margin-top: 10px;
   cursor: pointer;
-  transition: background-color 0.5s ease;
+  transition: background-color 0.3s ease-in;
   &:hover {
     background-color: #ff1e1e;
     color: white;
