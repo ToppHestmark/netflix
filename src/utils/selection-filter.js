@@ -1,11 +1,11 @@
 export default function selectionFilter({ series, films }) {
   return {
     series: [
-      { title: 'Docomentaries', data: series.filter((item) => item.genre === 'documentaries') },
-      { title: 'Comedies', data: series.filter((item) => item.genre === 'comedies') },
-      { title: 'Children', data: series.filter((item) => item.genre === 'children') },
-      { title: 'Crime', data: series.filter((item) => item.genre === 'crime') },
-      { title: 'Feel Good', data: series.filter((item) => item.genre === 'feel-good') },
+      { title: 'Documentaries', data: series?.filter((item) => item.genre === 'documentaries') },
+      { title: 'Comedies', data: series?.filter((item) => item.genre === 'comedies') },
+      { title: 'Children', data: series?.filter((item) => item.genre === 'children') },
+      { title: 'Crime', data: series?.filter((item) => item.genre === 'crime') },
+      { title: 'Feel Good', data: series?.filter((item) => item.genre === 'feel-good') },
     ],
     films: [
       { title: 'Drama', data: films.filter((item) => item.genre === 'drama') },
@@ -15,4 +15,4 @@ export default function selectionFilter({ series, films }) {
       { title: 'Romance', data: films.filter((item) => item.genre === 'romance') },
     ],
   }
-}
+};
